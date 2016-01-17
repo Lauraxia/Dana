@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+/* require grayscale-sass/assets/bower_components/jquery.easing/js/jquery.easing.js*/
+/* require grayscale-sass/assets/bower_components/bootstrap/dist/js/bootstrap.js*/
+/* require grayscale-sass/assets/js/grayscale.js*/
+
+/* require ../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js*/
