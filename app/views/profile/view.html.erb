@@ -1,33 +1,12 @@
-<h1>Profile#view</h1>
-<p>Find me in app/views/profile/view.html.erb</p>
+<div id="wrap" style="margin: 2em auto; max-width: 40em;">
+<h1>Profile</h1>
+<%= month_calendar attribute: :available, events: @offerings do |date,offerings| %>
+    <%= date.day %>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-
-        <%= f.label :name %>
-        <%= f.text_field :name, class: 'form-control' %>
-
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control' %>
-
-        <%= f.label :password_digest %>
-        <%= f.password_field :password_digest, class: 'form-control' %>
-
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-
-
-
-        <%= f.button "Charity", :group_type  %>
-        <%= label :group_type, "Charity" %>
-
-        <%= collection_select(:user, :group_id, Charity.all, :id, :name) %>
-
-
-        <
-        <%= f.submit "Create my Account", class: "btn btn-primary" %>
+    <% offerings.each do |offering| %>
+        <div>
+          <%= offering.name %>
+        </div>
     <% end %>
-  </div>
+<% end %>
 </div>

@@ -2,12 +2,18 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @charity = Charity.new
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to root_url
+    @charity = Charity.new(charity_params)
+    if @charity.save
+      @user = User.new(user_params)
+      if @user.save
+        redirect_to root_url
+      else
+        render 'new'
+      end
     else
       render 'new'
     end
@@ -17,7 +23,12 @@ class UsersController < ApplicationController
 
   #Strong Parameters
   def user_params
-    params.require(:user).permit(:name,:email,:password_digest, :group_id, :group_type)
+    x = Charity.find_by(params.require(:charity).permit(:name).to_param)
+    params.require(:user).permit(:name,:email,:password_digest, x, :group_type)
+  end
+  #Strong Parameters
+  def charity_params
+    params.require(:charity).permit(:name)
   end
 
 end

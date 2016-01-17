@@ -16,13 +16,21 @@
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+
+
+        <%= fields_for(@charity) do |u| %>
+
+        <%= label :name, "Name" %>
+        <%= u.text_field :name %>
+        <% end %>
+
         <%= f.radio_button :group_type, "Charity", :checked => true %>
         <%= label :group_type, "Charity" %>
         <%= f.radio_button :group_type, "Business" %>
         <%= label :group_type, "Business" %>
         <%= f.radio_button :group_type, "Club" %>
         <%= label :group_type, "Club" %>
-        <%= collection_select(:user, :group_id, Charity.all, :id, :name) %>
+
         <%= f.submit "Create my Account", class: "btn btn-primary" %>
     <% end %>
   </div>
