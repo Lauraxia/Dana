@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   get 'static_pages/help'
-
+  get 'profile/view'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
