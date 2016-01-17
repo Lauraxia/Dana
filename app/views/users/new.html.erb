@@ -22,7 +22,13 @@
         <%= label :group_type, "Business" %>
         <%= f.radio_button :group_type, "Club" %>
         <%= label :group_type, "Club" %>
-        <%= collection_select(:user, :group_id, Charity.all, :id, :name) %>
+        <%= fields_for(@charity) do |u| %>
+
+        <%= label :name, "C Name" %>
+        <%= u.text_field :name %>
+        <% end %>
+        <!--<%= collection_select(:user, :group_id, Charity.all, :id, :name) %>-->
+        <!--<%= collection_select(:user, :group_id, Company.all, :id, :name) %>-->
         <%= f.submit "Create my Account", class: "btn btn-primary" %>
     <% end %>
   </div>
