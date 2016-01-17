@@ -59,6 +59,7 @@ a {
 }
 
 .navbar-custom {
+
   margin-bottom: 0;
   border-bottom: 1px solid transparentize($grayscale-light, 0.7);
   text-transform: uppercase;
@@ -67,6 +68,7 @@ a {
 
   .navbar-brand {
     font-weight: 700;
+    padding: -50px;
     color: $grayscale-light;
     width: 500px;
 
@@ -122,7 +124,9 @@ a {
     padding: 20px 0;
     border-bottom: none;
     letter-spacing: 1px;
-    background: transparent;
+
+    background-color: #222222;
+    opacity: 0.7;
     -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -171,7 +175,6 @@ a {
 @media(min-width:$screen-xs-max) {
   .intro {
     height: 100%;
-    padding: 0;
 
     .intro-body {
 
@@ -188,29 +191,27 @@ a {
 .smalllogo{
   width: 40px;
   height: 40px;
-  background: url(../images/lotuslogo.png) no-repeat center center;
+  padding-top: 40px;
+  padding-right: 20px;
+  margin-top: -30px;
+  display: inline-block;
+  background: url(../images/lotuslogo.png) no-repeat bottom center;
   background-size: 40px;
 }
+.smalllogo2{
+margin: -50px -50px -50px 0px;
+  display: inline-block;
+
+}
 .btn-circle {
-  width: 90px;
-  height: 90px;
-  margin-top: 15px;
+  width: 140px;
+  height: 140px;
+  margin-top: -50px;
   padding: 7px 16px;
-  border: 2px solid $grayscale-light;
-  border-radius: 35px;
+
   font-size: 40px;
   color: $grayscale-light;
   background: url(../images/lotuslogo.png) no-repeat scroll center center;
-  -webkit-transition: background .3s ease-in-out;
-  -moz-transition: background .3s ease-in-out;
-  transition: background .3s ease-in-out;
-
-  &:hover,
-  &:focus {
-    outline: none;
-    color: $grayscale-light;
-    background: transparentize($grayscale-light, 0.9);
-  }
 }
 
 
@@ -222,7 +223,26 @@ a {
   width: 100%;
   padding: 50px 0;
   color: $grayscale-light;
-  background: $grayscale-light url(../images/downloads-bg.jpg) no-repeat scroll center center;
+  background: $grayscale-light url(../images/downloads-bg2.jpg) no-repeat scroll center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.restaurantbg {
+  width: 100%;
+  padding: 50px 0;
+  background: $grayscale-light url(../images/downloads-bg2.jpg) no-repeat scroll center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.cupcakesbg {
+  width: 100%;
+  padding: 50px 130px 130px 130px;
+
+  background: $grayscale-light url(../images/food-colorful-dessert-sweet.jpg) no-repeat scroll center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -238,7 +258,7 @@ a {
 @media(min-width:$screen-xs-max) {
 
   .content-section {
-    padding-top: 250px;
+    padding-top: 50px;
   }
 
   .download-section {
