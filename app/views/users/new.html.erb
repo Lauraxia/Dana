@@ -13,7 +13,7 @@
         <%= f.label :email %>
         <%= f.email_field :email, class: 'form-control' %>
 
-        <%= f.label :password_digest %>
+        <%= f.label :password_digest, "Password" %>
         <%= f.password_field :password_digest, class: 'form-control' %>
 
         <%= f.label :password_confirmation %>
@@ -23,7 +23,7 @@
 
         <%= fields_for(@charity) do |u| %>
 
-        <%= label :name, "Name" %>
+        <%= label :name, "Organization" %>
         <%= u.text_field :name %>
         <% end %>
 
