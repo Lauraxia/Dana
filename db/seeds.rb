@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Charity.create([{name: 'Fun Charity', description: 'Fun fun fun!'}])
+users = User.create([{ :name => 'Laura', :email => 'laura.mccrackin@gmail.com', :password_digest => 'password', :group => Charity.find(1)}])
