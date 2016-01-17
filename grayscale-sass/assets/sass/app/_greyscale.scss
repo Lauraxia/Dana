@@ -7,8 +7,8 @@ body {
   width: 100%;
   height: 100%;
   font-family: $grayscale-body-font-family;
-  color: $grayscale-light;
-  background-color: $grayscale-dark;
+  color: $grayscale-dark;
+  background-color: $grayscale-light;
   -webkit-tap-highlight-color: transparentize($grayscale-light, 0.8);
 }
 
@@ -67,6 +67,8 @@ a {
 
   .navbar-brand {
     font-weight: 700;
+    color: $grayscale-light;
+    width: 500px;
 
     &:focus {
       outline: none;
@@ -85,7 +87,7 @@ a {
   }
 
   a {
-    color: $grayscale-light;
+    color: $grayscale-dark;
   }
 
   .nav {
@@ -101,6 +103,7 @@ a {
         -webkit-transition: background .3s ease-in-out;
         -moz-transition: background .3s ease-in-out;
         transition: background .3s ease-in-out;
+        color: $grayscale-light;
 
         &:hover,
         &:focus,
@@ -123,6 +126,7 @@ a {
     -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
+
   }
 
   .top-nav-collapse {
@@ -142,7 +146,7 @@ a {
   padding: 100px 0;
   text-align: center;
   color: $grayscale-light;
-  background: $grayscale-dark url(../images/intro-bg.jpg) no-repeat scroll bottom center;
+  background: $grayscale-light url(../images/intro-bg.jpg) no-repeat scroll bottom center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -154,10 +158,12 @@ a {
 
     .brand-heading {
       font-size: 40px;
+      text-shadow: 2px 2px #222222;
     }
 
     .intro-text {
-      font-size: 18px;
+      font-size: 28px;
+      text-shadow: 1px 1px #222222;
     }
   }
 }
@@ -216,7 +222,7 @@ a {
   width: 100%;
   padding: 50px 0;
   color: $grayscale-light;
-  background: $grayscale-dark url(../images/downloads-bg.jpg) no-repeat scroll center center;
+  background: $grayscale-light url(../images/downloads-bg.jpg) no-repeat scroll center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
