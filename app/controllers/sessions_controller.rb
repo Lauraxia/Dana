@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email])
     if user
       log_in user
+      #@offerings = Offering.all
+      #render 'users/show'
       redirect_to root_url
     else
       flash.now[:danger] = 'Invalid email/password combination'

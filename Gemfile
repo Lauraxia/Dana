@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass'
-
+gem 'bootstrap-datepicker-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 # Use jquery as the JavaScript library
@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem "simple_calendar", "~> 2.0"
+# gem 'bcrypt', '3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

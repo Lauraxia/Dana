@@ -1,4 +1,3 @@
-
 <!-- Navigation -->
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
   <div class="container">
@@ -25,16 +24,22 @@
           <a class="page-scroll" href="#contact">Contact us</a>
         </li>
         <li>
-          <a class="page-scroll" href="#download2">Login</a>
+        <% if logged_in? %>
+              <%= link_to "Profile", show_path, method: :get %>
+              </li> <li>
+            <%= link_to "Log out", logout_path, method: :delete %>
+        <% else %>
+            <%= link_to "Sign Up", signup_path, method: :get %>
+            </li><li>
+            <%= link_to "Log In", login_path, method: :get %>
+        <% end %>
         </li>
-
       </ul>
     </div>
     <!-- /.navbar-collapse -->
   </div>
   <!-- /.container -->
 </nav>
-
 <!-- Intro Header -->
 <header class="intro">
   <div class="intro-body">
@@ -51,7 +56,6 @@
     </div>
   </div>
 </header>
-
 <!-- About Section -->
 <section id="about" class="container content-section text-center">
   <div class="row">
@@ -62,7 +66,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
       <h2>Local Businesses</h2>
-      <p>Dana helps businesses to prevent food waste and give back to their local community, while giving them the recognition they deserve.  Dana businesses provide socially conscious customers  Our goal for you is to fill your restaurant with enthusiastic clientele during your non peak hours in order to increase your bottom line. Dana offers full turnkey marketing solutions for you to use to promote your businesses. We reach out to the community on your behalf letting them know that your business is a socially responsible one. We also have partnerships with local organizations like (the rotary club, boy scouts, local hockey teams, and many other local social groups). We place events in your venues in order to grow your business on your slowest day of the week. The best part - it's completely monetarily free, the only this we ask is that one a month you donate your leftover food products to a charity in the Dana Network. Its also recommended but not required that you set up small group promotions for Dana customers in order to help pack your doors on your once quiet hours. </p>
+      <p>Dana helps businesses to prevent food waste and give back to their local community, while giving them the recognition they deserve. Dana offers full turnkey marketing solutions, allowing you to reach out to socially conscious consumers with exclusive offers. We also have partnerships with local organizations (the rotary club, local sports teams, and many other groups), allowing them to book events on slow business days and support charities at the same time. The best part is that it's completely free. </p>
     </div>
   </div>
   <div class="row">

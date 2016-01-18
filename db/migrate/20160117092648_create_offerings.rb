@@ -4,8 +4,7 @@ class CreateOfferings < ActiveRecord::Migration
       t.string :name
       t.datetime :available
       t.string :description
-      t.references :company_id, index: true, foreign_key: true
-      t.references :charity_id, index: true, foreign_key: true
+      t.belongs_to :user, index: true
 
       t.timestamps null: false
     end

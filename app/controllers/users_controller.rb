@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def show
+    @offerings = Offering.all
+  end
+
   def new
     @user = User.new
     @charity = Charity.new
@@ -10,7 +14,8 @@ class UsersController < ApplicationController
     if @charity.save
       @user = User.new(user_params)
       if @user.save
-        redirect_to root_url
+        log_in user
+        redirect_to 'users/show'
       else
         render 'new'
       end

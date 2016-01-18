@@ -31,21 +31,23 @@ ActiveRecord::Schema.define(version: 20160117092648) do
     t.string   "name"
     t.datetime "available"
     t.string   "description"
-    t.integer  "company_id_id"
-    t.integer  "charity_id_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  add_index "offerings", ["charity_id_id"], name: "index_offerings_on_charity_id_id"
-  add_index "offerings", ["company_id_id"], name: "index_offerings_on_company_id_id"
+  add_index "offerings", ["user_id"], name: "index_offerings_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
+    t.integer  "group_id"
+    t.string   "group_type"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
+  add_index "users", ["group_type", "group_id"], name: "index_users_on_group_type_and_group_id"
 
 end
